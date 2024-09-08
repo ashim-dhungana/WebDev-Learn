@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Intro</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+
+        /* SELECTORS */
+
+        /* Universal Selector */
+        *{
+            font-size: 20px;
+        }
+
+        /* Class selector */
+        .container{
+            color: blue;
+        }
+
+        /* Id selector */
+        #id2{
+            color: green;
+        }
+
+        /* Element selector */
+        p{
+            font-size: 40px;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box" id="id1">Box 1</div>
+        <div class="box" id="id2">Box 2</div>
+
+        <!-- Inline CSS -->
+        <div class="box" id="id3" style="color:red;">Box 3</div>
+    </div>
+
+    <p>This is a paragraph.</p>
+  
+</body>
+</html>

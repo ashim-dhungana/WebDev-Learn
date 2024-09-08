@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <form action="/" method="post">
+
+        Name: <input type="text" name="name" id="name">
+
+        <hr>
+
+        <label for="lastname">Lastname:</label>
+        <input type="text" name="lastname" id="lastname">
+
+        <hr>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+
+        <hr>
+
+        <label for="phone">Phone number:</label>
+        <input type="number" name="phone" id="phone">
+
+        <hr>
+
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date">
+
+        <hr>
+
+        Gender: Male <input type="radio" name="gender">
+        Female <input type="radio" name="gender">
+
+        <hr>
+
+        <label for="cars">Select your car: </label>
+        <select name="cars" id="cars">
+            <option value="mercedes">Mercedes</option>
+            <option value="aston martin">Aston Martin</option>
+            <option value="audi">Audi</option>
+            <option value="tesla">Tesla</option>
+        </select>
+
+        <hr>
+
+        <label for="description">Description:</label>
+        <br>
+        <textarea name="description" id="description"></textarea>
+
+        <hr>
+
+        <input type="submit">
+        <input type="reset">
+
+    </form>
+    
+</body>
+</html>

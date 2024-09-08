@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <style>
+
+        .container{
+            height: 50vh;
+            border: 5px solid red;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .box{
+            background-color: gold;
+
+            padding: 10px;
+            border: 10px solid green;
+            margin: 20px;
+            width: 10vw;
+            height: 10vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container2{
+            font-size: 12px;
+        }
+
+        /* Measurement Units */
+
+        /* Absolute Units */
+        .para{
+            font-size: 20px;
+        }
+        #p1{
+            font-size: 20pt;
+        }
+
+        /* Relative Units */
+        #p2{
+            font-size: 5vw;
+        }
+        #p3{
+            font-size: 200%;
+        }
+        #p4{
+            font-size: 3em;
+        }
+        #p5{
+            font-size: 3rem;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box" id="id1">Box 1</div>
+        <div class="box" id="id2">Box 2</div>
+        <div class="box" id="id3">Box 3</div>
+    </div>
+
+    <div class="container2">
+        <p class="para" id="p1">This is first paragraph.</p>
+        <p class="para" id="p2">This is second paragraph.</p>
+        <p class="para" id="p3">This is third paragraph.</p>
+        <p class="para" id="p4">This is fourth paragraph.</p>
+        <p class="para" id="p5">This is fifth paragraph.</p>
+    </div>
+
+
+</body>
+
+</html>
