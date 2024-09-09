@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fruits>
+
+    <fruit1>
+        <name>Apple</name>
+        <color>Red</color>
+        <price>Rs.300</price>
+    </fruit1>
+
+    <fruit2>
+        <name>Banana</name>
+        <color>Yellow</color>
+        <price>Rs.150</price>
+    </fruit2>
+
+</fruits>
