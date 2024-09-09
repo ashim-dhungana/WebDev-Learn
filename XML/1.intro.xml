@@ -2,16 +2,22 @@
 
 <fruits>
 
-    <fruit1>
+    <fruit category="hilly region">
         <name>Apple</name>
         <color>Red</color>
         <price>Rs.300</price>
-    </fruit1>
+    </fruit>
 
-    <fruit2>
+    <fruit category="terai region">
         <name>Banana</name>
         <color>Yellow</color>
         <price>Rs.150</price>
-    </fruit2>
+    </fruit>
 
 </fruits>
+
+
+<!-- XPath is a query language for navigating in XML document -->
+
+<!-- XPath of Yellow -->
+<!-- /fruits/fruit[2]/color -->
