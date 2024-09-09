@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE note SYSTEM "3.external_DTD.dtd">
+
+<note>
+    <to>Tony</to>
+    <from>Ashim</from>
+    <heading>Reminder</heading>
+    <body>You're Ironman</body>
+</note>
