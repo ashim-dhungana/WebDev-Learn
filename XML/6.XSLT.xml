@@ -7,4 +7,9 @@
         <lastname>Bell</lastname>
         <nickname>Garry</nickname>
     </student>
+    <student>
+        <firstname>Tony</firstname>
+        <lastname>Stark</lastname>
+        <nickname>Iron Man</nickname>
+    </student>
 </class>
