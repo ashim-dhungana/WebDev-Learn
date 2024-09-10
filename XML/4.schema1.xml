@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<note 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:noNamespaceSchemaLocation="schema1.xsd">
 
-    <student>
-        <firstname>Graham</firstname>
-        <lastname>Bell</lastname>
-        <nickname>Garry</nickname>
-    </student>
-    
-</class>
+    <to>Tony</to>
+    <from>Ashim</from>
+    <heading>Reminder</heading>
+    <body>You're Ironman</body>
+    <number>9810101010</number>
+
+</note>
