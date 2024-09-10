@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE note[
+<!DOCTYPE note [
     <!ELEMENT note (to,from,heading,body)>
     <!ELEMENT to (#PCDATA)>
     <!ELEMENT from (#PCDATA)>
     <!ELEMENT heading (#PCDATA)>
     <!ELEMENT body (#PCDATA)>
-    ]>
+]>
 
 <note>
     <to>Tony</to>
@@ -14,6 +13,3 @@
     <heading>Reminder</heading>
     <body>You're Ironman</body>
 </note>
-
-<!-- XML Document Type Definition (DTD)
-Used to perform validation -->
