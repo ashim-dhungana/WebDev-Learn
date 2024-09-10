@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:noNamespaceSchemaLocation="4.schema1.xsd">
+       xsi:SchemaLocation="schema1.xsd">
     <student>
         <firstname>Graham</firstname>
         <lastname>Bell</lastname>
