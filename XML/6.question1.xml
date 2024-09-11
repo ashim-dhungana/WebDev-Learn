@@ -2,7 +2,7 @@
 
 <library
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="question.xsd">
+    xsi:noNamespaceSchemaLocation="question1.xsd">
 
     <book id="1" language="English" format="hardcover">
         <title>The Catcher in the Rye</title>

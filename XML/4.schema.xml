@@ -2,7 +2,7 @@
 
 <note 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:noNamespaceSchemaLocation="schema1.xsd">
+    xsi:noNamespaceSchemaLocation="schema.xsd">
 
     <to>Tony</to>
     <from>Ashim</from>
