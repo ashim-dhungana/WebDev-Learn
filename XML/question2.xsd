@@ -4,16 +4,16 @@
         <xs:complexType>
             <xs:sequence>
 
-                <xs:element name="Shiporder">
+                <xs:element name="Shiporder" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
 
                             <xs:element name="Orderby">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="Ordername"></xs:element>
+                                        <xs:element name="Ordername" type="xs:string"></xs:element>
                                         <xs:element name="Orderphone"></xs:element>
-                                        <xs:element name="Orderdate"></xs:element>
+                                        <xs:element name="Orderdate" type="xs:date"></xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
@@ -45,7 +45,7 @@
                                 </xs:complexType>
                             </xs:element>
                                 
-                            <xs:element name="Orderitem">
+                            <xs:element name="Orderitem" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="Itemnumber"></xs:element>
