@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<library
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceschemaLocation="question.xsd">
+
+    <book id="1" language="English" format="hardcover">
+        <title>The Catcher in the Rye</title>
+        <author>J.D. Salinger</author>
+        <isbn>9780316769488</isbn>
+        <publisher>Little, Brown and Company</publisher>
+        <publicationDate>1951-07-16</publicationDate>
+        <availability>true</availability>
+    </book>
+
+    <book id="2" language="English" format="paperback">
+        <title>To Kill a Mockingbird</title>
+        <author>Harper Lee</author>
+        <isbn>9780061120084</isbn>
+        <publisher>HarperCollins Publishers</publisher>
+        <publicationDate>1960-07-11</publicationDate>
+        <availability>true</availability>
+    </book>
+
+</library>
