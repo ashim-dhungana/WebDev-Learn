@@ -7,6 +7,7 @@
                 <xs:element name="from" type="xs:string"></xs:element>
                 <xs:element name="heading" type="xs:string"></xs:element>
                 <xs:element name="body" type="xs:string"></xs:element>
+                <xs:element name="number" type="xs:integer" maxOccurs="2"></xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
