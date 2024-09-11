@@ -1,8 +1,72 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
     <xs:element name="Order">
-        
-    </xs:element>
+        <xs:complexType>
+            <xs:sequence>
 
+                <xs:element name="Shiporder">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="Orderby">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Ordername"></xs:element>
+                                        <xs:element name="Orderphone"></xs:element>
+                                        <xs:element name="Orderdate"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="Shipto">
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element name="Name"></xs:element>
+
+                                        <xs:element name="Shipaddress">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Street"></xs:element>
+                                                    <xs:element name="Houseno"></xs:element>
+                                                    <xs:element name="VDC"></xs:element>
+                                                    <xs:element name="Municipality"></xs:element>
+                                                    <xs:element name="City"></xs:element>
+                                                    <xs:element name="District"></xs:element>
+                                                    <xs:element name="Country"></xs:element>
+                                                    <xs:element name="Postalcode"></xs:element>
+                                                    <xs:element name="Telephone"></xs:element>
+                                                    <xs:element name="Mobile"></xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                                
+                            <xs:element name="Orderitem">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Itemnumber"></xs:element>
+                                        <xs:element name="Itemname"></xs:element>
+                                        <xs:element name="Itemnote"></xs:element>
+                                        <xs:element name="ItemInsurance"></xs:element>
+                                        <xs:element name="Itemquantity"></xs:element>
+                                        <xs:element name="Currency"></xs:element>
+                                        <xs:element name="Itemunitprice"></xs:element>
+                                        <xs:element name="Shipcharge"></xs:element>
+                                        <xs:element name="Totalprice"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
 </xs:schema>
