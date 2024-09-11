@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Order
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="question2.xsd">
+
+    <Shiporder orderid="1">
+
+        <Orderby>
+            <Ordername></Ordername>
+            <Orderphone></Orderphone>
+            <Orderdate></Orderdate>
+        </Orderby>
+
+        <Shipto>
+            <Name></Name>
+
+            <Shipaddress>
+                <Street></Street>
+                <Houseno></Houseno>
+                <VDC></VDC>
+                <Municipality></Municipality>
+                <City></City>
+                <District></District>
+                <Country></Country>
+                <Postalcode></Postalcode>
+                <Telephone></Telephone>
+                <Mobile></Mobile>
+            </Shipaddress>
+
+        </Shipto>
+
+        <Orderitem>
+            <Itemnumber></Itemnumber>
+            <Itemname></Itemname>
+            <Itemnote></Itemnote>
+            <ItemInsurance></ItemInsurance>
+            <Itemquantity></Itemquantity>
+            <Currency></Currency>
+            <Itemunitprice></Itemunitprice>
+            <Shipcharge></Shipcharge>
+            <Totalprice></Totalprice>
+        </Orderitem>
+
+    </Shiporder>
+
+
+</Order>
+
+
+<!-- Validation Rules:
+-
+ Use the data type as the Element name suggests. Elements must appear in
+proper sequence.
+-
+ Shiporder & Orderitem can appear multiple times.
+-
+ Orderid & Postalcode must not contain more than 10 characters & it must be
+positive integer.
+-
+ ‘Telephone’ & ‘Mobile’ must be 7 to 15 character long positive integer.
+-
+ Either one child element or another can appear in case of VDC & Municipality.
+If no country is specified ‘Nepal’ should be placed.
+-
+ ‘Itemnote’ is optional. Currency must contain 3 characters, uppercase A-Z.
+-
+ ‘ItemInsurance’ contains data either ‘Yes’ or ‘No’. -->
