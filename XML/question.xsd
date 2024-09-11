@@ -14,13 +14,7 @@
                         <xs:sequence>
                             <xs:element name="title" type="xs:string"></xs:element>
                             <xs:element name="author" type="xs:string" minOccurs="1" maxOccurs="unbounded"></xs:element>
-                            <xs:element name="isbn">
-                                <xs:simpleType>
-                                    <xs:restriction base="xs:string">
-                                        <xs:length value="13"></xs:length>
-                                    </xs:restriction>
-                                </xs:simpleType>
-                            </xs:element>
+                            <xs:element name="isbn" type="isbnType"></xs:element>
                             <xs:element name="publisher" type="xs:string"></xs:element>
                             <xs:element name="publicationDate" type="xs:date"></xs:element>
                             <xs:element name="availability" type="xs:boolean"></xs:element>
