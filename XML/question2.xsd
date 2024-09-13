@@ -1,5 +1,17 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+    <xs:simpleType name="orderidType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:length value="10"></xs:length>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="phoneType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:length value="15"></xs:length>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:element name="Order">
         <xs:complexType>
             <xs:sequence>
@@ -62,6 +74,9 @@
                             </xs:element>
 
                         </xs:sequence>
+
+                        <xs:attribute name="orderid" type="orderidType" use="required"></xs:attribute>
+
                     </xs:complexType>
                 </xs:element>
 
