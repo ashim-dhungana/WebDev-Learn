@@ -9,7 +9,7 @@
         <Orderby>
             <Ordername></Ordername>
             <Orderphone></Orderphone>
-            <Orderdate></Orderdate>
+            <Orderdate>2024-08-01</Orderdate>
         </Orderby>
 
         <Shipto>
@@ -18,14 +18,13 @@
             <Shipaddress>
                 <Street></Street>
                 <Houseno></Houseno>
-                <VDC></VDC>
                 <Municipality></Municipality>
                 <City></City>
                 <District></District>
                 <Country></Country>
-                <Postalcode></Postalcode>
-                <Telephone></Telephone>
-                <Mobile></Mobile>
+                <Postalcode>1234567891</Postalcode>
+                <Telephone>12345678</Telephone>
+                <Mobile>123456789</Mobile>
             </Shipaddress>
 
         </Shipto>
@@ -34,9 +33,9 @@
             <Itemnumber></Itemnumber>
             <Itemname></Itemname>
             <Itemnote></Itemnote>
-            <ItemInsurance></ItemInsurance>
-            <Itemquantity></Itemquantity>
-            <Currency></Currency>
+            <ItemInsurance>Yes</ItemInsurance>
+            <Itemquantity>5</Itemquantity>
+            <Currency>USD</Currency>
             <Itemunitprice></Itemunitprice>
             <Shipcharge></Shipcharge>
             <Totalprice></Totalprice>

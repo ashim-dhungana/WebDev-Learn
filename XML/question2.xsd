@@ -2,13 +2,34 @@
 
     <xs:simpleType name="orderidType">
         <xs:restriction base="xs:positiveInteger">
-            <xs:length value="10"></xs:length>
+            <xs:totalDigits value="10"></xs:totalDigits>
         </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="phoneType">
         <xs:restriction base="xs:positiveInteger">
-            <xs:length value="15"></xs:length>
+            <xs:minInclusive value="1000000"></xs:minInclusive>
+            <xs:maxInclusive value="999999999999999"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="postalcodeType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:totalDigits value="10"></xs:totalDigits>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="insuranceType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Yes"></xs:enumeration>
+            <xs:enumeration value="No"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="currencyType">
+        <xs:restriction base="xs:string">
+            <xs:length value="3"></xs:length>
+            <xs:pattern value="[A-Z]{3}"></xs:pattern>
         </xs:restriction>
     </xs:simpleType>
 
@@ -41,14 +62,24 @@
                                                 <xs:sequence>
                                                     <xs:element name="Street"></xs:element>
                                                     <xs:element name="Houseno"></xs:element>
-                                                    <xs:element name="VDC"></xs:element>
-                                                    <xs:element name="Municipality"></xs:element>
+
+                                                    <xs:choice>
+                                                        <xs:element name="Municipality"
+                                                            minOccurs="0"></xs:element>
+                                                        <xs:element name="VDC" minOccurs="0"></xs:element>
+                                                    </xs:choice>
+
                                                     <xs:element name="City"></xs:element>
                                                     <xs:element name="District"></xs:element>
-                                                    <xs:element name="Country"></xs:element>
-                                                    <xs:element name="Postalcode"></xs:element>
-                                                    <xs:element name="Telephone"></xs:element>
-                                                    <xs:element name="Mobile"></xs:element>
+
+                                                    <xs:element name="Country" type="xs:string"
+                                                        default="Nepal"></xs:element>
+
+                                                    <xs:element name="Postalcode"
+                                                        type="postalcodeType"></xs:element>
+
+                                                    <xs:element name="Telephone" type="phoneType"></xs:element>
+                                                    <xs:element name="Mobile" type="phoneType"></xs:element>
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
@@ -56,16 +87,21 @@
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                                
+
                             <xs:element name="Orderitem" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="Itemnumber"></xs:element>
                                         <xs:element name="Itemname"></xs:element>
-                                        <xs:element name="Itemnote"></xs:element>
-                                        <xs:element name="ItemInsurance"></xs:element>
-                                        <xs:element name="Itemquantity"></xs:element>
-                                        <xs:element name="Currency"></xs:element>
+
+                                        <xs:element name="Itemnote" type="xs:string" minOccurs="0"></xs:element>
+
+                                        <xs:element name="ItemInsurance" type="insuranceType"></xs:element>
+
+                                        <xs:element name="Itemquantity" type="xs:positiveInteger"></xs:element>
+
+                                        <xs:element name="Currency" type="currencyType"></xs:element>
+
                                         <xs:element name="Itemunitprice"></xs:element>
                                         <xs:element name="Shipcharge"></xs:element>
                                         <xs:element name="Totalprice"></xs:element>
