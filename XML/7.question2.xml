@@ -7,7 +7,7 @@
     <Shiporder orderid="1">
 
         <Orderby>
-            <Ordername></Ordername>
+            <Ordername>New Order</Ordername>
             <Orderphone>987654321</Orderphone>
             <Orderdate>2024-08-01</Orderdate>
         </Orderby>
@@ -16,12 +16,12 @@
             <Name></Name>
 
             <Shipaddress>
-                <Street></Street>
-                <Houseno></Houseno>
-                <Municipality></Municipality>
-                <City></City>
-                <District></District>
-                <Country></Country>
+                <Street>Old street</Street>
+                <Houseno>House no. 205</Houseno>
+                <Municipality>Belbari</Municipality>
+                <City>Belbari</City>
+                <District>Morang</District>
+                <Country>Nepal</Country>
                 <Postalcode>1234567891</Postalcode>
                 <Telephone>12345678</Telephone>
                 <Mobile>123456789</Mobile>
@@ -31,8 +31,8 @@
 
         <Orderitem>
             <Itemnumber>77</Itemnumber>
-            <Itemname></Itemname>
-            <Itemnote></Itemnote>
+            <Itemname>New item</Itemname>
+            <Itemnote>No notes</Itemnote>
             <ItemInsurance>Yes</ItemInsurance>
             <Itemquantity>5</Itemquantity>
             <Currency>USD</Currency>
