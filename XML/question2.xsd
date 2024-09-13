@@ -45,7 +45,7 @@
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="Ordername" type="xs:string"></xs:element>
-                                        <xs:element name="Orderphone"></xs:element>
+                                        <xs:element name="Orderphone" type="phoneType"></xs:element>
                                         <xs:element name="Orderdate" type="xs:date"></xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
@@ -60,17 +60,16 @@
                                         <xs:element name="Shipaddress">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="Street"></xs:element>
-                                                    <xs:element name="Houseno"></xs:element>
+                                                    <xs:element name="Street" type="xs:string"></xs:element>
+                                                    <xs:element name="Houseno" type="xs:string"></xs:element>
 
                                                     <xs:choice>
-                                                        <xs:element name="Municipality"
-                                                            minOccurs="0"></xs:element>
-                                                        <xs:element name="VDC" minOccurs="0"></xs:element>
+                                                        <xs:element name="Municipality" type="xs:string" minOccurs="0"></xs:element>
+                                                        <xs:element name="VDC" type="xs:string" minOccurs="0"></xs:element>
                                                     </xs:choice>
 
-                                                    <xs:element name="City"></xs:element>
-                                                    <xs:element name="District"></xs:element>
+                                                    <xs:element name="City" type="xs:string"></xs:element>
+                                                    <xs:element name="District" type="xs:string"></xs:element>
 
                                                     <xs:element name="Country" type="xs:string"
                                                         default="Nepal"></xs:element>
@@ -91,8 +90,8 @@
                             <xs:element name="Orderitem" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="Itemnumber"></xs:element>
-                                        <xs:element name="Itemname"></xs:element>
+                                        <xs:element name="Itemnumber" type="xs:positiveInteger"></xs:element>
+                                        <xs:element name="Itemname" type="xs:string"></xs:element>
 
                                         <xs:element name="Itemnote" type="xs:string" minOccurs="0"></xs:element>
 
@@ -102,9 +101,9 @@
 
                                         <xs:element name="Currency" type="currencyType"></xs:element>
 
-                                        <xs:element name="Itemunitprice"></xs:element>
-                                        <xs:element name="Shipcharge"></xs:element>
-                                        <xs:element name="Totalprice"></xs:element>
+                                        <xs:element name="Itemunitprice" type="xs:decimal"></xs:element>
+                                        <xs:element name="Shipcharge" type="xs:decimal"></xs:element>
+                                        <xs:element name="Totalprice" type="xs:decimal"></xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>

@@ -8,7 +8,7 @@
 
         <Orderby>
             <Ordername></Ordername>
-            <Orderphone></Orderphone>
+            <Orderphone>987654321</Orderphone>
             <Orderdate>2024-08-01</Orderdate>
         </Orderby>
 
@@ -30,15 +30,15 @@
         </Shipto>
 
         <Orderitem>
-            <Itemnumber></Itemnumber>
+            <Itemnumber>77</Itemnumber>
             <Itemname></Itemname>
             <Itemnote></Itemnote>
             <ItemInsurance>Yes</ItemInsurance>
             <Itemquantity>5</Itemquantity>
             <Currency>USD</Currency>
-            <Itemunitprice></Itemunitprice>
-            <Shipcharge></Shipcharge>
-            <Totalprice></Totalprice>
+            <Itemunitprice>45.6</Itemunitprice>
+            <Shipcharge>4.4</Shipcharge>
+            <Totalprice>50.0</Totalprice>
         </Orderitem>
 
     </Shiporder>
