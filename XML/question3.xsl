@@ -4,60 +4,55 @@
 
     <xsl:template match="/">
 
-    <html>
-        <head>
-            <style>
-                .nameclass, .codeclass{
+        <html>
+            <head>
+                <style>
+                    .nameclass, .codeclass{
                     font-size: 16pt;
                     color: green;
                     font-weight: bold;
-                }
-                .priceclass{
+                    }
+                    .priceclass{
                     font-size: 14pt;
-                }
-                .stockclass{
+                    }
+                    .stockclass{
                     color: red;
-                }
+                    }
 
-            </style>
-        </head>
+                </style>
+            </head>
 
-        <body>
-            <p>
-                <strong>Id:</strong>
-                <xsl:value-of select="/id/"></xsl:value-of>
-            </p>
-            <p class="nameclass">
-                <strong>Id:</strong>
-                <xsl:value-of select="/name/"></xsl:value-of>
-            </p>
-            <p class="codeclass">
-                <strong>Id:</strong>
-                <xsl:value-of select="/code/"></xsl:value-of>
-            </p>
-            <p>
-                <strong>Id:</strong>
-                <xsl:value-of select="/category/"></xsl:value-of>
-            </p>
-            <p>
-                <strong>Id:</strong>
-                <xsl:value-of select="/origin/"></xsl:value-of>
-            </p>
-            <p class="priceclass">
-                <strong>Id:</strong>
-                <xsl:value-of select="/price/"></xsl:value-of>
-            </p>
-            <p class="stockclass">
-                <strong>Id:</strong>
-                <xsl:value-of select="/stock/"></xsl:value-of>
-            </p>
-            
-        </body>
+            <body>
+                <p>
+                    <strong>Id:</strong>
+                    <xsl:value-of select="Products/id"></xsl:value-of>
+                </p>
+                <p class="nameclass">
+                    <strong>Name:</strong>
+                    <xsl:value-of select="Products/name"></xsl:value-of>
+                </p>
+                <p class="codeclass">
+                    <strong>Code:</strong>
+                    <xsl:value-of select="Products/code"></xsl:value-of>
+                </p>
+                <p>
+                    <strong>Category:</strong>
+                    <xsl:value-of select="Products/category"></xsl:value-of>
+                </p>
+                <p class="priceclass">
+                    <strong>Price:</strong>
+                    <xsl:value-of select="Products/price"></xsl:value-of>
+                    <span> (<xsl:value-of select="Products/price/@currency"></xsl:value-of>) </span>
+                </p>
+                <p class="stockclass">
+                    <strong>Stock:</strong>
+                    <xsl:value-of select="Products/stock"></xsl:value-of>
+                </p>
 
-    </html>
+            </body>
+
+        </html>
 
     </xsl:template>
 
 </xsl:stylesheet>
-
-    
