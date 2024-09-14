@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="currencyType">
+        <xs:restriction base="xs:string">
+            <xs:length value="3"></xs:length>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:element name="Products">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="id" type="xs:positiveInteger"></xs:element>
+                <xs:element name="name" type="xs:string"></xs:element>
+                <xs:element name="code" type="xs:string"></xs:element>
+                <xs:element name="category" type="xs:string"></xs:element>
+
+                <xs:element name="price">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:decimal">
+                                <xs:attribute name="currency" type="currencyType" use="required"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                
+
+                <xs:element name="stock" type="xs:positiveInteger"></xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

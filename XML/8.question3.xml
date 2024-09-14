@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Products>
+<Products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="question3.xsd">
+
+    <id>7</id>
+    <name>New product</name>
+    <code>product 5</code>
+    <category>All products</category>
+    <price currency="NPR">500.5</price>
+    <stock>77</stock>
 
 </Products>
-
 
 
 <!-- Products can contain many products, which has following child elements
