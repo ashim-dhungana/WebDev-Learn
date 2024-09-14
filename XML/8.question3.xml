@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Products>
+
+</Products>
+
+
+
+<!-- Products can contain many products, which has following child elements
+a. id (numbers only)
+b. name
+c. code
+d. category
+e. origin
+f. price (with attribute `currency`)
+g. stock (numbers only)
+
+Write XSLT to show data in following styles:
+a. name, code: font-size: 16pt font color: green and bold
+b. price: font-size: 14pt
+c. stock: font-color: red -->
