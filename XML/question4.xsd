@@ -4,11 +4,11 @@
         <xs:complexType>
             <xs:sequence>
 
-                <xs:element name="order">
+                <xs:element name="order" maxOccurs="1">
                     <xs:complexType>
                         <xs:sequence>
 
-                            <xs:element name="orderDate"></xs:element>
+                            <xs:element name="orderDate" type="xs:date"></xs:element>
 
                             <xs:element name="shippingAddress">
                                 <xs:complexType>
@@ -34,16 +34,26 @@
                                 </xs:complexType>
                             </xs:element>
 
-                            <xs:element name="items">
+                            <xs:element name="items" minOccurs="1" maxOccurs="20">
                                 <xs:complexType>
                                     <xs:sequence>
 
                                         <xs:element name="item">
                                             <xs:complexType>
                                                 <xs:sequence>
+
                                                     <xs:element name="itemName"></xs:element>
-                                                    <xs:element name="quantity"></xs:element>
-                                                    <xs:element name="price"></xs:element>
+
+                                                    <xs:element name="quantity">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:integer">
+                                                                <xs:maxInclusive value="100"></xs:maxInclusive>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+
+                                                    <xs:element name="price" type="xs:positiveInteger"></xs:element>
+
                                                 </xs:sequence>
                                                 <xs:attribute name="itemId" type="xs:integer"></xs:attribute>
                                             </xs:complexType>
@@ -55,7 +65,7 @@
 
                         </xs:sequence>
 
-                        <xs:attribute name="paid" type="xs:positiveInteger"></xs:attribute>
+                        <xs:attribute name="paid" type="xs:integer"></xs:attribute>
 
                     </xs:complexType>
                 </xs:element>
