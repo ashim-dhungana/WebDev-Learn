@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<purchaseOrder>
+
+    <order paid="1">
+
+        <orderDate></orderDate>
+
+        <shippingAddress>
+            <houseNumber></houseNumber>
+            <streetName></streetName>
+            <city></city>
+        </shippingAddress>
+
+        <billingAddress>
+            <houseNumber></houseNumber>
+            <streetName></streetName>
+            <city></city>
+        </billingAddress>
+
+        <items>
+            <item itemId="7">
+                <itemName></itemName>
+                <quantity></quantity>
+                <price></price>
+            </item>
+        </items>
+
+    </order>
+
+</purchaseOrder>
+
+
+<!-- a. purchaseOrder can have only one order with mandatory attribute ‘poid’ of
+integer type
+b. purchaseOrder must have orderDate, shippingAddress, billingAddress and items
+c. orderDate must be of Date Type
+d. shippingAddress and billingAddress must have the elements: houseNumber,
+streetName and city sequentially.
+e. items must come at least once to maximum 20 times
+f. items contains item that have itemName, quantity, and price.
+g. item must have ‘itemId’ attribute of integer type
+h. Maximum quantity of item should not be greater than 100
+i. itemPrice should not be negative.
+
+Write XSLT to show data in following styles:
+d. Price: if price > 100 then Product Name font-color: GREEN else font-color: RED
+e. Sort the Purchase order records using “quantity” in descending order. -->
