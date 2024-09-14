@@ -1,0 +1,67 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="purchaseOrder">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="order">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="orderDate"></xs:element>
+
+                            <xs:element name="shippingAddress">
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element name="houseNumber"></xs:element>
+                                        <xs:element name="streetName"></xs:element>
+                                        <xs:element name="city"></xs:element>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="billingAddress">
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element name="houseNumber"></xs:element>
+                                        <xs:element name="streetName"></xs:element>
+                                        <xs:element name="city"></xs:element>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="items">
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element name="item">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="itemName"></xs:element>
+                                                    <xs:element name="quantity"></xs:element>
+                                                    <xs:element name="price"></xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="itemId" type="xs:integer"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+
+                        <xs:attribute name="paid" type="xs:positiveInteger"></xs:attribute>
+
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
