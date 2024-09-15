@@ -10,20 +10,20 @@
         <orderDate>2024-08-08</orderDate>
 
         <shippingAddress>
-            <houseNumber></houseNumber>
-            <streetName></streetName>
-            <city></city>
+            <houseNumber>House 55</houseNumber>
+            <streetName>New Street</streetName>
+            <city>Good city</city>
         </shippingAddress>
 
         <billingAddress>
-            <houseNumber></houseNumber>
-            <streetName></streetName>
-            <city></city>
+            <houseNumber>House 77</houseNumber>
+            <streetName>Old Street</streetName>
+            <city>Bad city</city>
         </billingAddress>
 
         <items>
             <item itemId="7">
-                <itemName></itemName>
+                <itemName>New item</itemName>
                 <quantity>70</quantity>
                 <price>555</price>
             </item>
