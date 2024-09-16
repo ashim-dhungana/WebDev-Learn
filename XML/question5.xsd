@@ -1,0 +1,43 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="BOOKS">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="BOOK" maxOccurs="2">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="BOOK_NAME" type="xs:string"></xs:element>
+                            <xs:element name="AUTHOR" type="xs:string"></xs:element>
+                            <xs:element name="PRICE" type="xs:decimal"></xs:element>
+                            <xs:element name="TOTAL_PAGES" type="xs:positiveInteger"></xs:element>
+
+                            <xs:element name="PUBLISHER">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="PUBLISHER_NAME" type="xs:string"></xs:element>
+                                        <xs:element name="PUBLISHED_DATE" type="xs:date"></xs:element>
+                                        <xs:element name="ADDRESS">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="CITY" type="xs:string"></xs:element>
+                                                    <xs:element name="COUNTRY" type="xs:string"></xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+                        <xs:attribute name="ISBN_NO" type="xs:integer"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

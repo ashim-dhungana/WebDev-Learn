@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="question5.xsl" type="text/xsl"?>
+
+
+<BOOKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="question5.xsd">
+
+    <BOOK ISBN_NO="45">
+        <BOOK_NAME>New Book</BOOK_NAME>
+        <AUTHOR>No idea</AUTHOR>
+        <PRICE>100</PRICE>
+        <TOTAL_PAGES>500</TOTAL_PAGES>
+        <PUBLISHER>
+            <PUBLISHER_NAME>Unknown</PUBLISHER_NAME>
+            <PUBLISHED_DATE>2022-02-20</PUBLISHED_DATE>
+            <ADDRESS>
+                <CITY>Metro city</CITY>
+                <COUNTRY>Beautiful country</COUNTRY>
+            </ADDRESS>
+        </PUBLISHER>
+    </BOOK>
+
+    <BOOK ISBN_NO="12">
+        <BOOK_NAME>Old Book</BOOK_NAME>
+        <AUTHOR>No idea</AUTHOR>
+        <PRICE>200</PRICE>
+        <TOTAL_PAGES>250</TOTAL_PAGES>
+        <PUBLISHER>
+            <PUBLISHER_NAME>Unkown</PUBLISHER_NAME>
+            <PUBLISHED_DATE>2022-02-22</PUBLISHED_DATE>
+            <ADDRESS>
+                <CITY>Metro city 2</CITY>
+                <COUNTRY>Ugly country</COUNTRY>
+            </ADDRESS>
+        </PUBLISHER>
+    </BOOK>
+
+</BOOKS>
+
+
+<!-- Create a Well formed XML document which consists of following information with
+proper data. Insert information of two books.
+● BOOKS
+-
+ BOOK
+▪
+ ISBN_NO as Attribute
+▪
+ BOOK_NAME
+▪
+ AUTHOR (Can be Multiple)
+▪
+ PRICE
+▪
+ TOTAL_PAGES
+▪
+ PUBLISHER
+o PUBLIHSER_NAME
+o PUBLISHED_DATE
+o ADDRESS
+o CITY
+o COUNTRY -->

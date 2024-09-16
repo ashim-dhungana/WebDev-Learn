@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet href="practice.xsl" type="text/xsl"?>
+
+<Products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="practice.xsd">
+
+    <product>
+        <id>12</id>
+        <name>New product</name>
+        <code>45</code>
+        <origin>no origin</origin>
+        <price currency="NPR">300.5</price>
+        <stock>10</stock>
+    </product>
+
+    <product>
+        <id>12</id>
+        <name>New product</name>
+        <code>45</code>
+        <origin>no origin</origin>
+        <price currency="NPR">200.7</price>
+        <stock>10</stock>
+    </product>
+
+</Products>
+
+
+<!-- Create a Valid XML Schema for the following nodes. Add at least 2-3 product
+information.
+Products can contain many products, which has following child elements
+a. id (numbers only)
+b. name
+c. code
+d. category
+e. origin
+f. price (with attribute `currency`)
+g. stock (numbers only)
+Write XSLT to show data in following styles:
+6.a.b.a. name, code: font-size: 16pt font color: green and bold
+b. price: font-size: 14pt
+c. stock: font-color: red -->

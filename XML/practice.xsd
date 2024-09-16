@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="Products">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="product" minOccurs="2" maxOccurs="3">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                        <xs:element name="id" type="xs:integer"></xs:element>
+                        <xs:element name="name"></xs:element>
+                        <xs:element name="code"></xs:element>
+                        <xs:element name="origin"></xs:element>
+
+                        <xs:element name="price">
+                            <xs:complexType>
+                                <xs:simpleContent>
+                                    <xs:extension base="xs:decimal">
+                                        <xs:attribute name="currency"></xs:attribute>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="stock" type="xs:integer"></xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
