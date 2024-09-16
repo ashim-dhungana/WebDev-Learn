@@ -8,15 +8,20 @@
 </head>
 
 <body>
+
     <?php
 
     echo "Hello world";
 
+    // Writing HTML inside php tag
+    echo "<hr/>";
+
     $name = "Ashim";
     $age = 23;
-    echo "The age of ".$name." is ".$age;
-    
+    echo "The age of $name is $age";
+
     ?>
+
 </body>
 
 </html>
