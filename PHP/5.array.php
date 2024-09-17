@@ -18,13 +18,16 @@
 
     $arr1 = array("Apple", "Mango", "Banana");
     $arr2 = ["Audi", "Mercedes", "Tesla"];
-
-    foreach ($arr1 as $value) {
-        echo $value . ", ";
+    print_r($arr1);
+    
+    echo "<br>";
+    for ($i=0; $i<count($arr1); $i++) {
+        echo $arr1[$i] . ", ";
     }
     foreach ($arr2 as $value) {
         echo $value . ", ";
     }
+    echo "<br>The fruit in 3rd position is $arr1[2].";print_r($arr1);
     ?>
 
     <hr>
@@ -51,8 +54,6 @@
         array(2, 4, 6, 8),
         array(1, 3, 5, 7),
     );
-
-    echo "<br>";
     for ($i = 0; $i < count($multi); $i++) {
         for ($j = 0; $j < count($multi[$i]); $j++) {
             echo $multi[$i][$j];
