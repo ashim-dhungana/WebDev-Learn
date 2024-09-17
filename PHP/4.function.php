@@ -18,7 +18,7 @@
         $sum = 0;
 
         echo "The marks are:<br>";
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < count($marks); $i++) {
             echo $marks[$i];
             echo "<br>";
         }
