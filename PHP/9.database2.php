@@ -36,14 +36,14 @@ echo "<hr>";
 
 echo "<h3>Inserting Data</h3>";
 
-$sql = "INSERT INTO `Employees` (`Sno`, `Name`,`Position`) VALUES ('1','Ashim','CEO')";
-$sql = "INSERT INTO `Employees` (`Name`,`Position`) VALUES ('Ashim','CEO')";
-try{
-    mysqli_query($conn,$sql);
-    echo "Data successfully inserted.";
-} catch(Exception $e){
-    "Exception: " . $e->getMessage();
-}
+// $sql = "INSERT INTO `Employees` (`Sno`, `Name`,`Position`) VALUES ('1','Ashim','CEO')";
+// $sql = "INSERT INTO `Employees` (`Name`,`Position`) VALUES ('Ashim','CEO')";
+// try{
+//     mysqli_query($conn,$sql);
+//     echo "Data successfully inserted.";
+// } catch(Exception $e){
+//     "Exception: " . $e->getMessage();
+// }
 
 echo "<hr>";
 
@@ -53,6 +53,38 @@ echo "<hr>";
 echo "<h3>Reading Data</h3>";
 
 $sql = "SELECT * FROM `Employees`";
+$result = mysqli_query($conn,$sql);
 
+if ($result->num_rows > 0){
+    while ($row = mysqli_fetch_assoc($result)){
+        echo "<br> Id = " . $row['Sno'] . ", Name = " . $row['Name'] . " & Position = " . $row['Position'];
+    }
+}
+
+echo "<hr>";
+
+
+// UPDATING THE DATABASE
+
+echo "<h3>Updating Database</h3>";
+
+$sql = "UPDATE `Employees` SET `Name`='Tony' WHERE `Sno`=5";
+mysqli_query($conn,$sql);
+echo "Updated successfully.";
+
+echo "<hr>";
+
+
+// DELETING FROM DATABASE
+
+echo "<h3>Deleting from Database</h3>";
+$sql = "DELETE FROM `Employees` WHERE `Sno`=3";
+
+try{
+    mysqli_query($conn,$sql);
+    echo "Deleted successfully.";
+} catch (Exception $e){
+    "Exception: " . $e->getMessage();
+}
 
 ?>
