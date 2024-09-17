@@ -45,4 +45,14 @@ try{
     "Exception: " . $e->getMessage();
 }
 
+echo "<hr>";
+
+
+// READING FROM DATABASE
+
+echo "<h3>Reading Data</h3>";
+
+$sql = "SELECT * FROM `Employees`";
+
+
 ?>
