@@ -36,13 +36,31 @@
         'Tony' => 'Banana',
         'Steve' => 'Strawberry'
     );
-    foreach ($favFruits as $key => $value){
+    foreach ($favFruits as $key => $value) {
         echo "The favorite fruit of $key is $value.";
         echo "<br>";
     }
     ?>
 
     <hr>
+
+    <h3>Multidimensional array</h3>
+    <?php
+    $multi = array(
+        array(1, 2, 3, 4),
+        array(2, 4, 6, 8),
+        array(1, 3, 5, 7),
+    );
+
+    echo "<br>";
+    for ($i = 0; $i < count($multi); $i++) {
+        for ($j = 0; $j < count($multi[$i]); $j++) {
+            echo $multi[$i][$j];
+            echo " ";
+        }
+        echo "<br>";
+    }
+    ?>
 
 </body>
 
