@@ -15,9 +15,11 @@ echo "<br> Session name: $name";
 
 echo "<hr>";
 
-// Setting a cookie that expires in 1 day
-setcookie("category", "Books", time()+86000, "/");
-echo "Cookie has been set.";
+// Setting a cookie that expires in 1 hour
+$time = 3600;
+setcookie("category", "Books", time()+$time, "/");
+echo "Cookie has been set that expires in $time seconds.";
+
 
 // Can be written in another php file in same domain
 $cat = $_COOKIE['category'];
