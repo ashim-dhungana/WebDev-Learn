@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>This is all about DOM</h3>
+
+    <div class="container" id="id1">
+        This is the first container.
+    </div>
+
+    <div class="container">
+        This is the second container.
+    </div>
+
+    <p>This is a paragraph.</p>
+
+    <script>
+
+        // Gives a single element by its unique id
+        let obj1 = document.getElementById("id1");
+        console.log(obj1);
+        console.log("\n");
+
+        // Gives HTML collection containing elements that have same class
+        let obj2 = document.getElementsByClassName("container");
+        console.log(obj2);
+        console.log("\n");
+
+        // Gives HTML collection containing all "p" elements in the body
+        let obj3 = document.getElementsByTagName("p");
+        console.log(obj3);
+        console.log("\n");
+
+        // Gives first element with selected class
+        let obj4 = document.querySelector(".container");
+        let obj5 = document.querySelectorAll(".container");
+        console.log(obj4);
+        console.log(obj5);
+        console.log("\n");
+
+        // Gives the whole body of HTML page
+        console.log(document.body);
+        console.log("\n");
+
+        // Gives all childnodes including new lines and whitespaces
+        console.log(document.body.childNodes);
+        console.log("\n");
+
+        // Gives only child elements without new lines and whitespaces
+        console.log(document.body.children);
+        console.log("\n");
+
+    </script>
+
+</body>
+
+</html>
