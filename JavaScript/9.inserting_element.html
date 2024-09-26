@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        New content
+    </div>
+    <button id="addContent">Click to add content</button>
+
+    <div id="container2">
+        Another content
+    </div>
+    <button id="addContent2">Click for another content</button>
+
+    <button id="before">Click to insert before</button>
+    <button id="after">Click to insert after</button>
+
+    <button id="delete">Click to delete</button>
+
+    <script>
+
+        let content = document.getElementById("container");  
+        let btn1 = document.getElementById('addContent'); 
+        btn1.addEventListener("click", () => {
+            content.innerHTML += "<p> This is new line </p>";
+        });
+
+
+        let content2 = document.createElement("p");
+        let btn2 = document.getElementById('addContent2');
+        btn2.addEventListener("click", () => {
+            content2.innerText = "This is another line.";
+            document.getElementById('container2').append(content2);
+        });
+
+        let btn3 = document.getElementById("before");
+        let btn4 = document.getElementById("after");
+        let btn5 = document.getElementById("delete");
+
+        btn3.addEventListener("click", () => {
+            let content3 = document.createElement("p");
+            content3.innerText = "Added before the first element.";
+            document.getElementById('container').before(content3);
+        });
+        btn4.addEventListener("click", () => {
+            let content4 = document.createElement("p");
+            content4.innerText = "Added after the last element.";
+            document.getElementById('delete').after(content4);
+        });
+        btn5.addEventListener("click", () => {
+            document.getElementById('container').remove();
+        })
+
+
+        
+    </script>
+</body>
+</html>
