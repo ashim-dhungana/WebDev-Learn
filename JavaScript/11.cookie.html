@@ -9,7 +9,6 @@
 
 <body>
 
-
     <script>
 
         // Syntax: 
@@ -18,8 +17,9 @@
         let date = new Date();
         date.setTime(Date.now() + (60 * 60 * 1000));    // 1 hour in milliseconds
         let expires = "expires=" + date.toUTCString();
-
         document.cookie = "username=Ashim;" + expires + ";path=/";
+
+        console.log("Cookier successfully created.");
         console.log(document.cookie);
 
 
@@ -58,10 +58,9 @@
         // Deleting Cookie  -   Set the time in the past
         function deleteCookie(name) {
             document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            console.log("Cookie " + name + " deleted successfully.");
         }
         deleteCookie("username");
-
-
 
     </script>
 </body>
