@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>  
+        .container{
+            color: purple;
+            font-size: 25px;
+            border: 5px solid gold;
+            border-radius: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="id1">This is a container.</div>
+    <div id="id2">This is another container.</div>
+    <hr>
+    <button id="btn">Click to change style</button>
+    <button id="btn2">Click to toggle class</button>
+
+    <hr>
+
+    <div id="id3">Styled by using single line JS code.</div>
+
+    <script>
+
+        let btn = document.getElementById('btn');
+        let btn2 = document.getElementById('btn2');
+        let container = document.getElementById('id1');
+        let container2 = document.getElementById('id2');
+
+        // Changing number of styles
+        btn.addEventListener('click' , () => {
+            container.style.color = 'blue';
+            container.style.fontSize = '20px';
+            container.style.border = '2px solid black';
+            container.style.padding = '20px';
+        })
+  
+        // Changing a single style attribute
+        document.getElementById('id3').style.color='green';
+
+        // Changing style by toggling class
+        btn2.addEventListener('click', () => {
+            container2.classList.toggle("container");
+        })
+
+    </script>
+
+</body>
+
+</html>
