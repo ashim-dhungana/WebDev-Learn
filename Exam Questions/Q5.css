@@ -1,0 +1,27 @@
+.newtable{
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+
+    border-collapse: collapse;
+}
+.newtable th,td{
+    border: 1px solid black;
+    padding: 5px;
+}
+.newtable th{
+    background-color: aqua;
+    font-size: 18px;
+    font-weight: bold;
+}
+.newtable .mini{
+    font-size: 18px;
+    font-weight: bold;
+}
+.newtable td{
+    background-color: aquamarine;
+}
+.newtable .new{
+    border: none;
+    border-right: 1px solid black;
+}

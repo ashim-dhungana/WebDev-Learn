@@ -1,0 +1,50 @@
+<!-- Create a form with a text box for accepting the user input and a "Calculate" button, clicking on which calculates the factorial of the input and displays the result on another text box. Write JavaScript code to perform necessary data validation on user input. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="formid">
+        <label for="number">Number: </label>
+        <input type="number" name="number" id="number">
+
+        <button type="submit">Calculate</button>
+
+        <div>
+            <label for="answer">Factorial:</label>
+            <input type="number" name="answer" id="answer" readonly>
+        </div>
+
+    </form>
+
+    <script>
+        let form = document.getElementById('formid');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let number = document.getElementById('number').value;
+
+            function recur(num) {
+                if (num === 0 || num === 1) {
+                    return 1;
+                }
+                return num * recur(num - 1);
+            }
+            let factorial = recur(number);
+            console.log(factorial);
+
+            document.getElementById('answer').value = factorial;
+        })
+    </script>
+
+</body>
+
+</html>

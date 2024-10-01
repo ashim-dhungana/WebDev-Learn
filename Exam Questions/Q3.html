@@ -1,0 +1,36 @@
+<!-- Write a JS program that uses "onChange" event handler to find the area of circle after entering the value of raius in text box. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="radius">Radius:</label>
+    <input type="number" name="radius" id="radius" onchange="area()">
+
+    <hr>
+
+    <label for="answer">Area:</label>
+    <input type="number" name="answer" id="answer">
+
+    <script>
+        function area(){
+            let r = document.getElementById('radius').value;
+            let area = Math.PI*r*r;
+            document.getElementById('answer').value = area;
+        }
+
+        // let radius = document.getElementById('radius');
+        // radius.addEventListener('change', function() {
+        //     let r = radius.value;
+        //     let area = Math.PI*r*r;
+        //     document.getElementById('answer').value = area;
+        // })
+
+    </script>
+</body>
+</html>

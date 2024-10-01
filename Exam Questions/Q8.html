@@ -1,0 +1,81 @@
+<!-- Rules:
+Email Address: cannot start with number
+Password: minimum 8 characters and maximum 12 character
+Mobile Number: required, must be 10 digit number
+Input fields size need to be 20 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Q8.css">
+</head>
+
+<body>
+
+    <form class="formclass" id="myForm">
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" size="20">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" size="20">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="number">Mobile No.: </label>
+            <input type="tel" name="number" id="number" size="20" required>
+        </div>
+
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <script>
+
+        let form = document.getElementById('myForm');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let number = document.getElementById('number').value;
+
+            let emailPattern = /^[^\d]/;
+            if (!emailPattern.test(email)) {
+                alert("Invalid email: it cannot start with a number.");
+                return;
+            }
+
+            if (password.length < 8 || password.length > 12) {
+                alert("Password must be between 8 and 12 characters.");
+                return;
+            }
+
+            const mobilePattern = /^\+977(97|98)[0-9]{8}$/;
+            if (!mobilePattern.test(number)) {
+                alert("Mobile number must be exactly 10 digits.");
+                return;
+            }
+
+            // If all validations pass
+            alert("Form successfully submitted!");
+        });
+    </script>
+
+</body>
+
+</html>

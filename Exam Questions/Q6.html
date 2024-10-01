@@ -1,0 +1,81 @@
+<!-- Write a JS code to input names na dage of 10 different person in two different arrays, and display the name of the oldest person on a text box after clicking on a Display button. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="newform">
+        <div>
+            <label for="name1">Name:</label>
+            <input type="text" name="name1" id="name1" required>
+
+            <label for="age1">Age:</label>
+            <input type="number" name="age1" id="age1" required>
+        </div>
+        <div>
+            <label for="name2">Name:</label>
+            <input type="text" name="name2" id="name2" required>
+
+            <label for="age2">Age:</label>
+            <input type="number" name="age2" id="age2" required>
+        </div>
+        <div>
+            <label for="name3">Name:</label>
+            <input type="text" name="name3" id="name3" required>
+
+            <label for="age3">Age:</label>
+            <input type="number" name="age3" id="age3" required>
+        </div>
+        <div>
+            <label for="name4">Name:</label>
+            <input type="text" name="name4" id="name4" required>
+
+            <label for="age4">Age:</label>
+            <input type="number" name="age4" id="age4" required>
+        </div>
+
+        <button type="submit">Display</button>
+
+    </form>
+
+    <hr>
+
+    <label for="answer">Oldest Person: </label>
+    <input type="text" name="answer" id="answer" readonly>
+
+
+    <script>
+
+        let form = document.getElementById('newform');
+
+        form.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            let names = [];
+            let ages = [];
+
+            for (let i=1; i<=4; i++){
+                n = document.getElementById('name'+i).value;
+                a = document.getElementById('age'+i).value;
+                names.push(n);
+                ages.push(Number(a));
+            }
+            let maxage = Math.max(...ages);
+            let index = ages.indexOf(maxage);
+            let answer = names[index];
+
+            document.getElementById('answer').value = answer;
+        })
+         
+    </script>
+
+</body>
+
+</html>

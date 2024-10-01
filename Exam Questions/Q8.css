@@ -1,0 +1,9 @@
+.formclass{
+    border: 2px solid black;
+    padding: 5px;
+    width: 30vw;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
