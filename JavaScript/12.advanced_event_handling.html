@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Event Handling</title>
+
+    <style>
+        .container {
+            border: 3px solid black;
+            background-color: gold;
+            padding: 2vw;
+        }
+
+        .childContainer {
+            border: 2px solid green;
+            background-color: orange;
+            padding: 2vw;
+        }
+
+        .child {
+            border: 2px solid red;
+            background-color: aqua;
+            padding: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="childContainer">
+            <div class="child">
+                I am a child
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // To read which key is pressed
+        document.addEventListener('keydown', (e) => {
+            console.log(e)
+            console.log(e.key, e.keyCode)
+        })
+
+        // Event Bubbling
+
+        document.querySelector(".child").addEventListener('click', (e) => {
+            alert("Child was clicked")
+        })
+        document.querySelector('.childContainer').addEventListener('click', (e) => {
+            // Stopping Event bubbling from this point onwards
+            e.stopPropagation()
+            alert("Child container was clicked")
+        })
+        document.querySelector('.container').addEventListener('click', (e) => {
+            alert("Container was clicked")
+        })
+
+
+        // Function to generate random colors
+        function getRandomColor() {
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1},${val2},${val3})`
+        }
+
+        // Set Interval
+        // To run a set of code again and again in a said interval
+        setInterval(() => {
+            document.querySelector('.child').style.background = getRandomColor();
+            console.log("New line");
+        }, 2000);
+
+
+        // Set Timeout
+        // To time a set of code to run once after 4 seconds
+        setTimeout(() => {
+            document.querySelector('.container').style.background = getRandomColor();
+            console.log("Another line");
+        }, 4000)
+
+    </script>
+</body>
+
+</html>
