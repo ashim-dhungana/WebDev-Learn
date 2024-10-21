@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // CALLBACK
+
+        // To run functions on-demand by passing functions into another functions
+
+        const callback = (arg) => {
+            console.log(arg)
+        }
+
+        const loadScript = (src, callback) => {
+            let sc = document.createElement('script');
+            sc.src = src;
+            sc.onload = callback('Ashim');
+            document.head.append(sc)
+        }
+
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", callback)
+
+
+
+        // PROMISES     -   Promises of code execution
+        // Solution to callback-hell
+
+        // The promise is solved by either resolving or rejecting
+        let prom1 = new Promise((resolve, reject) => {
+            let a = Math.random();
+
+            if (a < 0.5) {
+                reject("Less than 0.5");
+            }
+            else {
+                setTimeout(() => {
+                    console.log("Yes I am done")
+                    resolve("King")
+                }, 3000)
+            }
+        })
+        // To show the error(rejection)
+        prom1.then((a) => {
+            console.log(a)
+        })
+
+        // To print the exact error message in console
+        let error = prom1.then(() => {})
+        error.catch((err) => {
+            console.log(err)
+        })
+
+
+    </script>
+
+</body>
+
+</html>
